@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: #042331;
+            width: 16vw;
+            height: 100%;
+            color: white;
+            position: fixed;
+            left: -16vw;
+            transition: all 0.5s;
+        }
+        .container header{
+            line-height: 5rem;
+            font-size: 2rem;
+            background-color: #063146;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding: 0 1rem 0 2rem;
+        }
+        header i{
+            font-size: 1rem;
+        }
+        ul li{
+            text-decoration: none;
+            list-style: none;
+            font-size: 1.5rem;
+            line-height: 4.2rem;
+            margin-left: 2rem;
+            border-bottom: 1px solid black;
+            border-top: 1px solid rgba(225,225,225,0.1);
+            transition: 0.4s;
+        }
+        ul li i{
+            margin-right: 1.5rem;
+        }
+        ul li:hover{
+                padding-left: 0.8rem;
+        }
+
+        #check{
+            display: none;
+        }
+
+        label #btn, label #cancel{
+            position: absolute;
+            cursor: pointer;
+        }
+        label #btn{
+            left: 1rem;
+            font-size: 1.5rem;
+            top: 1rem;
+            padding: 0.8rem;
+            border-radius: 0.5rem;
+            color: white;
+            background-color: black;
+            /* transform: all 0.5s; */
+        }
+        label #cancel{
+            z-index: 11;
+            left: -13.5vw;
+            font-size: 1.5rem;
+            top: 1.5rem;
+            color: white;
+            transition: all 0.5s;
+        }
+        #check:checked ~ .container{
+            left: 0px;
+        }
+        #check:checked ~ label #btn{
+            left: 20vw;
+            opacity: 0;
+            pointer-events: none;
+        }
+        #check:checked ~ label #cancel{
+            left: 13.5vw;
+        }
+        section{
+            background: url("Netflix/netflix_background.jpg") no-repeat;
+            height: 100vh;
+            background-position: center;
+            transition: all 0.5s;
+        }
+        #check:checked ~ section{
+            margin-left: 16vw;
+        }
+    </style>
+</head>
+<body>
+    <!-- main key to make slider -->
+     <!-- So using label (if checked then givr positions coresspondingly) -->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i id="btn" class="fa-solid fa-bars"></i>
+        <i id="cancel" class="fa-solid fa-xmark"></i>
+    </label>
+
+    <div class="container">
+        <header>
+            <div class="heading">
+                My Content
+            </div>
+        </header>
+        <div class="items">
+            <ul>
+                <li><i class="fa-solid fa-bars"></i>Menu</li>
+                <li><i class="fa-solid fa-qrcode"></i>Dashboard</li>
+                <li><i class="fa-solid fa-link"></i>Link</li>
+                <li><i class="fa-solid fa-stream"></i>Overview</li>
+                <li><i class="fa-solid fa-question-circle"></i>About</li>
+                <li><i class="fa-solid fa-file-lines"></i>Events</li>
+                <li><i class="fa-solid fa-envelope"></i>Contact</li>
+                <li><i class="fa-solid fa-icons"></i>Explore More</li>
+            </ul>
+        </div>
+    </div>
+    <section>
+    </section>
+</body>
+</html>

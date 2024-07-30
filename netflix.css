@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    border: border-box;
+}
+body{
+    background-color: black;
+}
+/* background of website */
+main{
+    background-image: url('Netflix/netflix_background.jpg');
+    height: 95vh;
+    /* background-size: max(1200px, 100vw); */
+    background-position: center center;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+/* box used for fading background image */
+main .box{
+    height: 95vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.56;
+    position: absolute;
+    top: 0;
+}
+
+/* Navbar */
+
+nav{
+    margin: auto;
+    max-width: 80vw;  /* margin auto and max width se center me kiye as required */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40rem;
+    padding: 24px 32px;
+}
+/* netflix_logo */
+.logo{
+    /* collor of logo will be changed in svg file*/
+    height: 50px;
+    width: 148px;
+    position: relative;
+    z-index: 5;
+}
+.button{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+.lang{
+    border: 1px solid grey;
+    height: 32px;
+    font-size: 18px;
+    color: aliceblue;
+    position: relative;
+    padding: 0.5rem 0.8rem;
+    z-index: 5;
+    
+}
+.sign-in button{
+    width: 78px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: rgb(229, 9, 20);
+    color: white;
+    position: relative;
+    z-index: 5;
+}
+
+/* hero section */
+.hero{
+    height: 80%; /* to bring in center*/
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    position: relative;
+    z-index: 5;
+}
+h1{   
+    font-size: 3rem;
+    font-weight: 900;
+}
+p{
+    font-size: 24px;
+    margin-top: 16px;
+}
+.Sign-in span{
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+.email{
+    color: #dddddd;
+    background-color: rgb(0 0 1);
+    border: 1px solid grey;
+    font-size: 16px;
+    padding-left: 10px;
+    margin: 20px;
+    width: 375px;
+    height: 54px;
+}
+.start{
+    margin-top: 2px;
+}
+.Sign-in button{
+    height: 56px;
+    width: 200px;
+    background-color: rgb(229, 9, 20);
+    color: white;
+    border-radius: 4px;
+    font-size: 24px;
+    margin-left: 5px;
+}
+.fa-angle-right{
+    margin-left: 12px;
+}
+.seperation{
+    background-color: grey;
+    height: 5px;
+}
+
+/* Section 1 */
+.section{
+    height: 600px;
+    display: flex;
+    margin: auto;
+    max-width: 80vw;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.secImage{
+    position: relative;
+}
+.secImage img{
+    width: 35vw;
+    position: relative;
+    z-index: 10;
+}
+.secImage video{
+    position: absolute;
+    width: 30vw;
+    top: 51px;
+    right: 20px;
+}
+
+/* Section 2 */
+.card{
+    display: flex;
+}
+.cardImage img{
+    height: 72px;
+}
+#downloading{
+    color: blue;
+}
+#Strange{
+    font-weight: bold;
+}
+.FAQ{
+    color: white; 
+    padding: 72px 0;    
+}
+.FAQ h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(45, 45, 45); */
+    font-size: 24px;
+    color: #ffffff;
+    padding: 25px;
+    max-width: 70vw;
+    margin: 10px auto;
+    
+}
+
+.Sign-in{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer{ 
+    padding-top: 50px;
+    padding-bottom: 80px;
+    padding-left: 200px;
+    padding-right: 400px;
+}
+.footer-content{
+    color: #ffffffb3;
+    max-width: 80vw;
+    margin: auto;
+}
+.footer p{
+    font-size: 16px;
+}
+.footer-section{
+    font-size: 14px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.footer-section ul li{
+    list-style: none;
+    margin-top: 20px;
+}
+.footer a{
+    text-decoration: underline;
+    color: #ffffffb3;
+    font-size: 14px;
+}
+.lang-btn span{
+    margin-right: 15px;
+    margin-left: 15px;  
+}
+.lang-btn button{
+    color: #ffffff;
+    padding: 8px 15px;
+    background-color: rgb(0 0 1);
+    border: 1px solid grey;
+}

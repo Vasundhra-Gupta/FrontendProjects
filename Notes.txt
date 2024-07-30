@@ -1,0 +1,213 @@
+//Linked in, well found(for startups), Naukri.com, Indeed.com, AICTE Internship portal
+//Git:used by general coders to collaberate code
+//Diffrence between git and git hub is....git is an open source and github is microsoft owned company
+
+//Overflow property
+    overflow: scroll;(to have scroll bar);
+    overflow: auto;(if no overflow,no scroll);
+    whitespace: nowrap
+
+//CSS grid
+    display: grid;
+    //method 1
+        //for container
+        grid-template-columns: ; 
+        grid-template-rows: ;
+        (to give names to grid)
+        grid-template-columns: [pehla]100px [doosra]100px; 
+
+        //for items
+        grid-row: ;
+        grid-columns: ;
+        Or
+        grid-row-start: ;
+        grid-row-end: ;
+    //method 2
+        //for container
+            grid-template-areas: "nav nav nav"
+                                "side article article"
+                                "footer footer footer";
+        
+        //for items
+            grid-area: ;
+
+    //some properties of grids
+        //fr unnits
+            grid-template-columns: 1fr 2fr 1fr;(3 columns with 2nd column having double width of 1st and 3rd)
+        //gap: ;
+        //justify items, align items
+        //align-items, fr individual items
+        //repeat
+             grid-template-columns: repeat(5, 1fr)
+             grid-template-columns: repeat(5, minmax(100px, 1fr))
+        //justify, align content
+            if grid is very small as compared to container then we use this to align whole grid!
+        //place content
+            justify and align content dono ka kam krega! 
+
+//CSS Transform
+    /*for multiple properties, use spaces and write properties
+    (1) transform:  rotate(angle) means roate by that angle
+                    rotate3D()
+                    rotate X()
+                    rotate Y()
+                    rotate Z()
+    (2) transform:  scale(1.3) means 1.5 times bada    
+    (3) transform:  skew(angle) means rotate about axis by that angle, not fr z-axis.
+    (4) transform:  translate( px) means move by that much pixels
+    (5) transform-origin: ( , ) means about which point rotation occurs.
+
+//CSS transitions
+    /transition dekhne k liye check, uncheck krke dekho inspect me!
+    transition property
+    transition duration
+    transition timing-function
+    transition delay
+
+//CSS animations
+    /*for multiple animation, write  other animation just below the first one with ,
+    @keyframes myAnimation{
+        //code
+    }
+    @keyframes myAnimation{
+    from{
+        transform: translateX(600px);
+    }
+    to{
+        transform: translateX(1000px);
+    }
+}
+@keyframes myAnimation{
+    0%{
+        //code
+    }
+    30%{
+        //code
+    }
+    50%{
+        //code
+    }
+}
+    animation name
+    animation duration
+    animation timing-function
+    animation delay
+    animation iteration
+    animation direction
+    animation fill mode, forward(aage hi rh jaega)/backward
+    
+//Object-fit and Object cover
+    /for image and image tag me lagta hai!!
+    Object-fit: cover
+                contain
+                fill
+                scaledown
+    Object-position: top-right means top right vali position dikhani h....   
+    background-image: url("")
+    background-position:center center....... used fr telling kitna dikhana h background
+    background-repeat:  no repeat
+                        repeat-X...........(in case of a choti image!)
+    background-clip:    border-box
+                        padding-box
+                        content-box
+
+//CSS filters
+    img{
+        filter: blur( px);
+                contrast
+                brightness
+                opacity
+                sepia
+                and so on.....
+    }
+
+//Figma
+    leading collaberative design tool for building meaningful products.
+    (1) font size bada krne k liye scale ka use kro!
+    (2) u can search anything in figma community
+    (3) Ctrl D press kro item p click krke hen u can replicate it by dragging.
+    (4) u can create an object as component by right click..so that can insert it again.
+    (5) bring to front, right click
+    (6) Shift=> circle only, without using shift, u can make any shape kind of ellipse.
+
+//
+    ...Use font awesome for fonts!
+    ...cdnjs(content deliver network java script) se font awesom ki library ko pick krskte h!
+
+//Hw exercise
+    1 box me 4 images fix
+    border on a whole div
+
+    https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v (tv1)
+
+    https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v (tv2)
+
+//core web vitals
+web.dev is a good website to learm about core web vitals and all
+
+//svg file code(Scalable vector graphics)
+<svg width="60" height="60">
+            <circle cx="25" cy="25" r="20" stroke="black" stroke-width="2" fill="red" />
+        </svg>
+//printing exact code on webpage
+&lt;  for <
+&gt;  for >
+&amp; for &
+&nbsp; for a non-breaking space
+&copy; for ©
+
+//Canvas
+The <canvas> element serves as a container for graphics, which can be rendered via scripting.
+
+We use canvas for graphics(drawing shapes, graphs), dynamic content and Interactivity.
+
+Its important attributes are width and height.
+
+//Character sets
+essential concept in html, influencing how textual content is displayed and interpreted by the browser.
+UTF-8
+ISO-8859
+ASCII(American Standard Code for Information Interchange)
+
+//CSS Specificity
+for same type of selection, bottom-most code is implemented.
+Inline: 1000
+Id selectors: 100
+class, attributes, pseudo classes: 10
+elements, pseudo elements, selectors: 1
+
+//Float and clear
+    Float property is used to wrap text and elements around another element(say image).
+    float:right; means there will be no content on right of float, aloowed on left only.
+    But when text overflow, img doesn't give its container. So we use {display: flow root;} then.
+    clear: right; means element will not wrap around right-floated elements.
+
+    Clear property prevents elements from wrapping around preceding floated elements.
+    clear: none; means the elements will allow wrapping (Default value)
+//!important is used to over prioritise all other styles.
+like {property: value !important} 
+
+//More on CSS selectors
+using the universal selector locally
+boxes *{
+
+}
+
+//CSS position
+we need to set position frst if we wanna set z index.
+relative position means we can shift its position from current
+In absolute position, it shifts wrt its nearest positioned parent.
+transform, filter and perspective properties can also make an element appear positioned.
+
+
+
+
+
+
+
+
+
+
+
+
+    

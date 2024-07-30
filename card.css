@@ -1,0 +1,52 @@
+.card{
+    height: 398px;
+    width: 198px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+}
+
+/* #image{
+    width: 188px;
+    img size can be controlled by img tag
+} */
+#image{
+    padding: 5px;
+}
+#image img{
+    border-radius: 7px;
+}
+#body{
+    /* height: 0.5em;
+    position: absolute;
+    top: 60px; */
+    padding: 7px;
+}
+
+#button{
+    text-align: center;
+    padding: 8px;
+}
+#button button{
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: rgba(20, 113, 205,0.5);
+    color: blue; 
+    padding: 0px 7px;
+    cursor: pointer; /*to use button hover*/
+}
+#button button:hover{
+    background-color: wheat;
+    color: blue;
+}
+#text,.span{
+    color: grey;
+}
+.span{
+    padding: 0 5px;
+}
+span{
+    padding: 7px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid rgba(113, 98, 98, 0.5);
+}

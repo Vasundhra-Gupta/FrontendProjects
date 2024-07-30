@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: linear-gradient(red, yellow);
+            height: 100vh;
+            font-family: "Playwrite NG Modern", cursive;
+         }
+        .header{
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+        
+        .main{
+            height: 20vh;
+            width: 40vw;
+            border: 4px solid black;
+            border-radius: 2rem;
+            font-size: 5rem;
+            font-weight: 500;
+            margin: auto;
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-style: double;
+            color: white;
+            /* background-color: rgb(64, 224, 208); */
+            background-color: #00573F;
+            font-family:sans-serif;
+        }
+        .alarms{
+            display: flex;
+            width: 50vw;
+            justify-content: space-evenly;
+            align-items: center;
+            margin:auto;
+        }
+        .stop button{
+            padding: 0.6rem 2rem;
+            font-size: 1.8rem;
+            border-radius: 2rem;
+            background-color: black;
+            color: white;
+            margin-top: 2rem;
+        }
+        .set button{
+            padding: 0.6rem 2rem;
+            font-size: 1.8rem;
+            border-radius: 2rem;
+            background-color: black;
+            color: white;
+            margin-top: 0.5rem;
+        }
+        .set{
+            margin-top: 2rem;
+            text-align: center;
+        }
+        input{
+            border-radius: 1.4rem;
+            width: 10rem;
+            height: 1.6rem;
+            text-align: center;
+            font-size: 1.2rem;
+            padding: 0.6rem;
+            margin-top: 1rem;
+        }
+        .stop button:hover{
+            border: 1px solid white;
+        }
+        .stop button:active{
+            border: 2px solid white;
+        }
+        .set button:hover{
+            border: 1px solid white;
+        }
+        .set button:active{
+            border: 2px solid white;
+        }
+        .text{
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>ALARM CLOCK</h2>
+    </div>
+    <div  class="main">
+        <div class="hours">00</div>
+        <div class="colon">:</div>
+        <div class="minutes">00</div>
+        <div class="colon">:</div>
+        <div class="seconds">00</div>
+    </div>
+    <div class="alarms">
+        <div class="set">
+            <div class="setTime">
+                <!-- <input type="time" value="time"> -->
+                <input id="min" type="text" placeholder="Enter time in min">
+                <input id="sec" type="text" placeholder="Enter time in sec">
+            </div>
+            <div class="setAlarm">
+                <button>Set Alarm</button>
+                <div class="text"></div>
+            </div>
+        </div>
+        <div class="stop">
+            <button>Stop Alarm</button>
+        </div>
+    </div>
+    <div>
+        <audio class="myAudio" src="clock-alarm-8761.mp3" loop></audio>
+    </div>
+    
+    <script>
+        let msg= document.querySelector(".text");
+        let inputMin= document.getElementById("min");
+        let inputSec= document.getElementById("sec");
+        let time= document.querySelector(".main");
+        let hr= document.querySelector(".hours");
+        let min= document.querySelector(".minutes");
+        let sec= document.querySelector(".seconds");
+        let stopBtn= document.querySelector(".stop button");
+        let setBtn= document.querySelector(".setAlarm button");
+        // let audio= new Audio("clock-alarm-8761.mp3");
+        let audio= document.querySelector(".myAudio");
+        console.log(audio);
+        let date= new Date();
+        hr.innerHTML= date.getHours();
+        min.innerHTML= date.getMinutes();
+        sec.innerHTML= date.getSeconds();
+
+        setInterval(() => {
+            sec.innerHTML= parseInt(sec.innerHTML)+1;
+            if(sec.innerHTML==60){
+                sec.innerHTML=0;
+                min.innerHTML= parseInt(min.innerHTML)+1;
+            }
+            if(min.innerHTML==60){
+                min.innerHTML=0;
+                hr.innerHTML= parseInt(hr.innerHTML)+1;
+            }
+            playAudio();
+        }, 1000);
+
+        function playAudio(){ 
+            console.log(inputMin.value);
+            console.log(inputSec.value);
+            if((sec.innerHTML==inputSec.value)&&(min.innerHTML==inputMin.value)){
+                audio.play();
+            }
+        }
+        console.log(stopBtn);
+        
+        stopBtn.addEventListener("click",()=>{
+            audio.pause();
+            return;
+        });
+
+        setBtn.addEventListener("click",()=>{
+            if(inputMin.value==''||(inputSec.value=='')){
+                alert("Please Enter time to set an alarm!");
+            }else{
+                msg.innerHTML= "Your alarm has been set!"
+                confirm("The alarm will only ring if your PC is awake!")
+            }
+        });
+    </script>
+</body>
+</html>

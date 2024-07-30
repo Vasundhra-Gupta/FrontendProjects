@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="amazon.css">
+    <!-- linking font awesome library to connect our website to the nearest server -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <!-- logo -->
+            <div class="nav-logo border">
+                <img src="Amazon/Amazon-Logo-Font-1-scaled.webp" height="60px">
+            </div>
+            <!-- location -->
+            <div class="nav-location border">
+                <p class="small-add">Delivering to Dehradun 248001</p>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="big">Update Location</p>
+                </div>
+            </div>
+            <!-- Search -->
+            <div class="nav-search border">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input class="search" type="text" placeholder="Search Amazon.in">
+                <div class="search-button"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <!-- lang btn -->
+            <div class="first border">
+                <img src="Amazon/flag.jpg" height="16px">
+                <p class="big">EN</p>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <!-- Sign-in -->
+            <div class="second border">
+                <p class="small"><span>Hello, sign in</span></p>
+                <p class="big">Accounts and lists</p>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <!-- Return and order -->
+            <div class="third border">
+                <p class="small">Returns</p>
+                <p class="big">& Orders</p>
+            </div>
+            <!-- Cart -->
+            <div class="fourth border">
+                <i class="cart-icon fa-solid fa-cart-shopping"></i>
+                <p class="big">Cart</p>
+            </div>
+        </div>
+
+        <!-- Nav-shop -->
+        <div class="nav-shop">
+            <!-- Menu -->
+            <div class="nav-shop-menu border">
+                <i class="fa-solid fa-bars"></i><span>All</span>
+            </div>
+            <!-- Panel-options -->
+            <div class="nav-shop-left">
+                <ul>
+                    <li class="border"><a href="#">Amazon miniTV</a></li>
+                    <li class="border"><a href="#">Sell</a></li>
+                    <li class="border"><a href="#">Best Sellers</a></li>
+                    <li class="border"><a href="#">Today's Deals</a></li>
+                    <li class="border"><a href="#">Mobiles</a></li>
+                    <li class="border"><a href="#">Electronics</a></li>
+                    <li class="border"><a href="#">Customer Service</a></li>
+                    <li class="border"><a href="#">Prime<i class="fa-solid fa-caret-down"></i></a></li>
+                </ul>
+            </div>
+            <!-- Panel-Right-Image -->
+            <div class="nav-shop-right">
+                <img src="Amazon/shop_right.jpg">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero-Section -->
+        <div class="hero-section">
+            <!-- <img src="Amazon/hero_image.jpg"> -->
+            <!-- Use background Image -->
+            <!-- Hero-message -->
+            <!-- <div class="hero-message">
+                <span>You are on Amazon.com. You can also shop on Amazon India for million of products with fast local delivery.</span><a>Click here to go to amazon.in</a>
+            </div> -->
+        </div>
+
+        <!-- Shop-section -->
+        <div class="shop-section">
+            <div class="box1 box">
+                <div class="box-content">
+                    <h2>Starts Early for Prime Members</h2>
+                    <div class="box-image" style="background-image: url('Amazon/box1.jpg');"></div>
+                    <p><a>Start 3 day free-trial</a></p>
+                </div>
+            </div>
+            <div class="box2 box">
+                <div class="box-content">
+                    <h2>Clothes and Fashion</h2>
+                    <div class="box-image" style="background-image: url('Amazon/box2.jpg');"></div>
+                    <p><a>See more</a></p>
+                </div>
+            </div>
+            <div class="box3 box">
+                <div class="box-content">
+                    <h2>Under ₹699 | Combo packs | Amazon brands & more</h2>
+                    <div class="box-image" style="background-image: url('Amazon/box3.jpg');"></div>
+                    <p><a>See more</a></p>
+                </div>
+            </div>
+            <div class="box4 box">
+                <div class="box-content">
+                    <h2>Up to 60% off | Car, bike parts & accessories</h2>
+                    <div class="box-image" style="background-image: url('Amazon/box4.jpg');"></div>
+                    <p><a>See more</a></p>
+                </div>
+            </div>
+            <div class="box5 box">
+                <div class="box-content">
+                    <h2>Health and Personal Care</h2>
+                    <div class="box-image" style="background-image: url('Amazon/box5.jpg');"></div>
+                    <p><a>See more</a></p>
+                </div>
+            </div>
+            <div class="box6 box">
+                <div class="box-content">
+                    <h2>Furniture</h2>
+                    <div class="box-image" style="background-image: url('Amazon/box6.jpg');"></div>
+                    <p><a>See more</a></p>
+                </div>
+            </div>
+            <div class="box7 box">
+                <div class="box-content">
+                    <h2>Electronics</h2>
+                    <div class="box-image" style="background-image: url('Amazon/box7.jpg');"></div>
+                    <p><a>See more</a></p>
+                </div>
+            </div>
+            <div class="box8 box">
+                <div class="box-content">
+                    <h2>Beauty Picks</h2>
+                    <div class="box-image" style="background-image: url('Amazon/box8.jpg');"></div>
+                    <p><a>See more</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="first-section">Back to top</div>
+        <div class="second-section">
+            <ul>
+                <li><a id="heading" href="$">Get to Know Us</a></li>
+                <li><a href="$">About Us</a></li>
+                <li><a href="$">Careers</a></li>
+                <li><a href="$">Press Releases</a></li>
+                <li><a href="$">Amazon Science</a></li>
+            </ul>
+            <ul>
+                <li><a id="heading" href="$">Connect with Us</a></li>
+                <li><a href="$">Facebook</a></li>
+                <li><a href="$">Twitter</a></li>
+                <li><a href="$">Instagram</a></li>
+            </ul>
+            <ul>
+                <li><a id="heading" href="$">Make Money with Us</a></li>
+                <li><a href="$">Sell on Amazon</a></li>
+                <li><a href="$">Sell under Amazon Accelerator</a></li>
+                <li><a href="$">Protect and Build Your Brand</a></li>
+                <li><a href="$">Amazon Global Selling</a></li>
+                <li><a href="$">Become an Affiliate</a></li>
+                <li><a href="$">Fulfilment by Amazon</a></li>
+                <li><a href="$">Advertise Your Products</a></li>
+                <li><a href="$">Amazon Pay on Merchants</a></li>
+            </ul>
+            <ul>
+                <li><a id="heading" href="$">Let Us Help You</a></li>
+                <li><a href="$">COVID-19 and Amazon</a></li>
+                <li><a href="$">Your Account</a></li>
+                <li><a href="$">Returns Centre</a></li>
+                <li><a href="$">100% Purchase Protection</a></li>
+                <li><a href="$">Amazon App Download</a></li>
+                <li><a href="$">Help</a></li>
+            </ul>
+        </div>
+        <div class="third-section">
+            <div class="third-section-upper">
+                <img src="Amazon/Amazon-Logo-Font-1-scaled.webp" width="90px" height="68px">
+                <div class="lang-btn">
+                    <div class="lang-btn-content">
+                        <i class="fa-solid fa-globe"></i><span>English</span><i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="third-section-lower">
+                <ul>
+                    <li><a href="#">Australia</a></li>
+                    <li><a href="#">Brazil</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">China</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Germany</a></li>
+                    <li><a href="#">Italy</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">Mexico</a></li>
+                    <li><a href="#">Netherlands</a></li>
+                    <li><a href="#">Poland</a></li>
+                    <li><a href="#">Singapore</a></li>
+                    <li><a href="#">Spain</a></li>
+                    <li><a href="#">Turkey</a></li>
+                    <li><a href="#">United Arab Emirates</a></li>
+                    <li><a href="#">United Kingdom</a></li>
+                    <li><a href="#">United States</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="fourth-section">
+            <div class="grid-footer">
+                <div class="item">
+                    <ul>
+                        <li id="first-item"><a href="%">AbeBooks</a></li>
+                        <li><a href="%">Books, art</a></li>
+                        <li><a href="%">& collectibles</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li id="first-item"><a href="%">AbeBooks</a></li>
+                        <li><a href="%">Books, art</a></li>
+                        <li><a href="%">& collectibles</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li id="first-item"><a href="%">AbeBooks</a></li>
+                        <li><a href="%">Books, art</a></li>
+                        <li><a href="%">& collectibles</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li id="first-item"><a href="%">AbeBooks</a></li>
+                        <li><a href="%">Books, art</a></li>
+                        <li><a href="%">& collectibles</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li id="first-item"><a href="%">AbeBooks</a></li>
+                        <li><a href="%">Books, art</a></li>
+                        <li><a href="%">& collectibles</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li id="first-item"><a href="%">AbeBooks</a></li>
+                        <li><a href="%">Books, art</a></li>
+                        <li><a href="%">& collectibles</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li id="first-item"><a href="%">AbeBooks</a></li>
+                        <li><a href="%">Books, art</a></li>
+                        <li><a href="%">& collectibles</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li id="first-item"><a href="%">AbeBooks</a></li>
+                        <li><a href="%">Books, art</a></li>
+                        <li><a href="%">& collectibles</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <ul>
+                    <li><a href="%">Conditions of Use & Sale</a></li>
+                    <li><a href="%">Privacy Notice</a></li>
+                    <li><a href="%">Interest-Based Ads</a></li>
+                </ul>
+                <div class="last">© 1996-2024, Amazon.com, Inc. or its affiliates</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

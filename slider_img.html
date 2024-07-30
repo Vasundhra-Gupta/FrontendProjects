@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imager Slider</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 70%;
+            height: 500px;
+            margin: auto;
+            margin-top: 100px;
+            position: relative;
+            box-shadow: 0px 0px 3px grey;
+            overflow: hidden;
+        }
+        .slide{
+            position: absolute;
+            transition: 1s;
+        }
+        .prev_next{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .prev_next button{
+            font-size: 25px;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="slide"><img src="game/rock.jpg" width="500px " height="500px" ></div>
+        <div class="slide"><img src="game/paper.jpg" width="500px" height="500px"></div>
+        <div class="slide"><img src="game/scissor.jpg" width="500px" height="500px"></div>
+        <div class="slide"><img src="game/rock.jpg" width="500px" height="500px"></div>
+    </div>
+    <div class="prev_next">
+        <button onclick="goPrev()">Prev</button>
+        <button onclick="goNext()">Next</button>
+    </div>
+    
+</body>
+<script>
+    const slides=document.querySelectorAll(".slide");
+    var counter=0;
+    slides.forEach(
+        (val, indx)=>{
+            val.style.left= `${indx*100}%`
+        }
+    )
+    let slideImage=()=>{
+        slides.forEach(
+            (val)=>{
+                val.style.transform=`translateX(${-counter*120}%)`;
+            }
+        )
+        if(val==''){
+                val.style.transform=`translateX(0)`;
+            }
+    }
+    function goPrev(){
+        counter--;
+        slideImage();
+    }
+    function goNext(){
+        counter++;
+        slideImage();
+    }
+</script>
+</html>

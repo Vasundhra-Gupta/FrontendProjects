@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+    <style>
+        .background{
+            position: relative;
+            height: 60vh;
+            width: 1200px;
+            border: 2px solid black;
+            background-color: greenyellow;
+        }
+        .ball{
+            height: 40px;
+            width: 40px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation:  bounceX 6s linear infinite,
+                        bounceY 1s ease-out 0s infinite alternate;
+        }
+        /* .translate{
+            transform: translateX(400px);
+
+        } */
+        @keyframes bounceX {
+            from{
+                left: 0;
+            }
+            to{
+                left: 100%;
+            }
+        }
+         @keyframes bounceY {
+            from{
+                /* transform: translateX(200px) translateY(-200px); */
+                bottom: 0;
+            }
+            to{
+                /* transform: translateX(200px) translateY(200px); */
+                bottom: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="ball translate"></div>
+    </div>
+</body>
+</html>
