@@ -133,7 +133,6 @@
     let answerbuttons= document.querySelector('.answerbuttons');
     let nextBtn= document.querySelector('.next-btn button');
     let addBtn= document.querySelector(".add button");
-    console.log(answerbuttons.children);
     let currentIndex=0;
     let score=0;
     //adding questions
@@ -162,7 +161,6 @@
             answerbuttons.appendChild(button);
             //setting true and false in given answer options.
             button.dataset.correct= ans.correct;
-            console.log(button.dataset.correct)
             button.addEventListener("click", selectAnswer);
         });
     }
