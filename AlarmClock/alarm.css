@@ -1,12 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
     background: linear-gradient(red, yellow);
-    height: 100vh;
+    height: 85vh;
     font-family: "Playwrite NG Modern", cursive;
 }
 .header {
     font-size: 3rem;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 15vh;
 }
 
 .main {
@@ -63,12 +68,12 @@ body {
     text-align: center;
 }
 input {
-    border-radius: 1.4rem;
+    border-radius: 1.6rem;
     width: 10rem;
     height: 1.6rem;
     text-align: center;
     font-size: 1.2rem;
-    padding: 0.6rem;
+    padding: 1.5rem 2rem;
     margin-top: 1rem;
 }
 .stopAlarm button:hover {

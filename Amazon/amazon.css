@@ -110,7 +110,7 @@
 /* Hero section */
 .hero-section{
     height: 300px;
-    background-image: url('Amazon/hero_image.jpg');
+    background-image: url('Assets/hero_image.jpg');
     background-size: cover;
     display: flex;
     justify-content: center;

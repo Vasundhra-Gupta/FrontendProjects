@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!Welcome to the quiz!</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(135deg, #00feba, #5b548a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 35vw;
+            /* margin: auto; */
+            /* background-color: #00231e; */
+            /* background-color: #555; */
+            background-color: #ebfffc;
+            
+            border-radius: 0.6rem;
+            padding: 1.5rem;
+        }
+        .container h1{
+            border-bottom: 0.5px solid grey;
+            padding-bottom: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+        .btn{
+            width: 100%;
+            /* height: 2.8rem; */
+            border: 1px solid black;
+            border-radius: 5px;
+            text-align: left;
+            background-color: rgb(85, 85, 85, 0.2);
+            /* background-color: #ebfffc; */
+            /* background-color: rgb(173, 255, 47, 0.1); */
+            font-size: 1.5rem;
+            margin-top: 1.1rem;
+            padding: 0.7rem 1.5rem;
+            cursor: pointer;
+        }
+        .btn:hover:not([disabled]){
+            background-color: black;
+            color: white;
+        }
+        .btn:disabled{
+            cursor: no-drop;
+        }
+        .next-btn{
+            text-align: center;
+        }
+        .next-btn button{
+            text-align: center;
+            background-color: blueviolet;
+            font-size: 1.6rem;
+            padding: 0.4rem 1.2rem;
+            border-radius: 10%;
+            margin-top: 1.1rem;
+            /* display: none; */
+        }
+        .add button{
+            text-align: center;
+            background-color: blueviolet;
+            font-size: 1.6rem;
+            padding: 0.4rem 1.2rem;
+            border-radius: 10%;
+            margin: 5rem;
+        }
+        .correct{
+            background-color: #00feba;
+        }
+        .incorrect{
+            background-color: rgb(242, 63, 63);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz</h1>
+        <div class="quiz">
+            <h2 id="ques">This is a dummy question:</h2>
+            <div class="answerbuttons">
+            </div>
+            <div class="next-btn">
+                <button></button>
+            </div>
+        </div>
+    </div>
+    <div class="add">
+        <button>Add</button>
+    </div>
+    <script>
+    let questions= [
+            {
+            question: "What do you want to learn today",
+            answer: [
+                {text: "HTML", correct: false},
+                {text: "CSS", correct: false},
+                {text: "JS", correct: true},
+                {text: "Database", correct: false},
+            ]
+            },
+            {
+            question: "What do you think is easy",
+            answer: [
+                {text: "HTML", correct: true},
+                {text: "CSS", correct: false},
+                {text: "JS", correct: false},
+                {text: "Database", correct: false},
+            ]
+            },
+            {
+            question: "What do you want to learn by heart",
+            answer: [
+                {text: "HTML", correct: false},
+                {text: "CSS", correct: false},
+                {text: "JS", correct: false},
+                {text: "Database", correct: true},
+            ]
+            },
+    ]
+    let ques= document.getElementById('ques');
+    let answerbuttons= document.querySelector('.answerbuttons');
+    let nextBtn= document.querySelector('.next-btn button');
+    let addBtn= document.querySelector(".add button");
+    let currentIndex=0;
+    let score=0;
+    //adding questions
+    // addBtn.addEventListener("click",()=>{
+    //     let 
+    // })
+    // starting quiz
+    function startQuiz(){
+        currentIndex=0;
+        score=0;
+        nextBtn.innerHTML= "Next";
+        //showing ques
+        showQues();
+    }
+    function showQues(){
+        reset();
+        let data=questions[currentIndex];
+        let qNo= currentIndex+1;
+        //inside ques
+        ques.innerHTML= `Question ${qNo}. ${data.question}`;
+        //inside ans
+        data.answer.forEach(ans=>{
+            let button= document.createElement("button");
+            button.innerHTML= ans.text;
+            button.classList.add("btn");
+            answerbuttons.appendChild(button);
+            //setting true and false in given answer options.
+            button.dataset.correct= ans.correct;
+            button.addEventListener("click", selectAnswer);
+        });
+    }
+    
+    //clearing prev ans options
+    function reset(){
+        nextBtn.style.display="none";
+        while(answerbuttons.firstChild){
+            answerbuttons.removeChild(answerbuttons.firstChild);
+        }
+    }
+    //after clicking on the option
+    function selectAnswer(e){
+        let selectedAns= e.target;
+        const isCorrect= selectedAns.dataset.correct;
+        if(isCorrect=="true"){
+            selectedAns.classList.add("correct");
+            score++;
+        }else{
+            selectedAns.classList.add("incorrect");
+        }
+        //till here it is for all options, correct/incorrect, so below is the solution for that
+        Array.from(answerbuttons.children).forEach((ele)=>{
+            if(ele.dataset.correct=="true"){
+                ele.classList.add("correct");
+            }
+            ele.disabled=true;
+        });
+        nextBtn.style.display="block";
+    }
+    //what on clicking next button
+    nextBtn.addEventListener("click", ()=>{
+        if(currentIndex<questions.length){
+            currentIndex++;
+            if(currentIndex< questions.length){
+                showQues();
+            }else{
+                reset();
+                showScore();
+            }
+        }else{
+            startQuiz();
+        }
+    })
+    function showScore(){
+        nextBtn.style.display="block";
+        nextBtn.innerHTML= "Play Again";
+        ques.innerHTML= `You Scored ${score} out of ${questions.length} in the quiz`;
+    }
+    startQuiz();
+    </script>
+</body>
+</html>
